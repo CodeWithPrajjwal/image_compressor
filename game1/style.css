@@ -1,0 +1,104 @@
+*{
+    margin : 0;
+    padding : 0;
+
+}
+body{
+    overflow: hidden;
+}
+.game-container{
+    background-image: url(bg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width : 100vw;
+    height : 100vh;
+    
+}
+.dino{
+    background-image: url(hero.png);
+    background-repeat: no-repeat;
+    background-size: 195px 195px;
+    width : 195px;
+    height : 195px;
+    position: absolute;
+    left : 25vw;
+    bottom: 40px;
+}
+.obstacle{
+    background-image: url(villain.png);
+    background-size: 200px 200px;
+    background-repeat: no-repeat;
+    width : 200px;
+    height : 200px;
+    position: absolute;
+    left: 70vw;
+    bottom : 40px;
+}
+.reload{
+    padding: 2px;
+    width: 56px;
+    color: white;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 100px;
+    left: 20vw;
+    border-radius: 9px;
+    border-style: inset;
+    border-color: red;
+    cursor: pointer;
+
+}
+.gameOver{
+    border-style: inset;
+    border-color: red;
+    visibility: hidden;
+    position: absolute;
+    left : 41vw;
+    top : 50px;
+    border-radius: 25px;
+    text-align:center;
+    font-size: 55px;
+    background-color: black;
+    color: white;
+}
+
+.animateDino{
+   animation : dino 0.9s linear;
+}
+.obstacleAnimate{
+    animation : obstacleAnimate 7s linear infinite;
+}
+#scorecount {
+    padding: 2px;
+    color: white;
+    background-color: black;
+    position: absolute;
+    top: 100px;
+    right: 20vw;
+    border-radius: 9px;
+    border-style: inset;
+    border-color: red;
+  }
+@keyframes dino{
+    0%{
+        bottom : 0;
+    }
+    50%{
+        bottom:70vh;
+    }
+
+    100%{
+        bottom : 0;
+    }
+}
+
+@keyframes obstacleAnimate{
+    0%{
+        left : 110vw;
+    }
+    
+    100%{
+        left : -10vw;
+    } 
+}

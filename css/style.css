@@ -1,0 +1,237 @@
+/* mixins */
+/* resets and base styles */
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+  *:focus {
+    outline: none; }
+
+/* imports */
+/* colors */
+/* variables */
+/* resets and base styles */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+  *:focus {
+    outline: none; }
+
+html {
+  background: black;
+  color: white;
+  font: normal 10px/1.42857 "Source Sans Pro", Helvetica, Arial, sans-serif; }
+
+body {
+  background: none;
+  color: inherit;
+  font: inherit; }
+
+a {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none; }
+  a:hover {
+    opacity: 0.8; }
+
+img.sun{
+  width: 100px;
+  height: 100px;
+   border-radius:100%;
+}
+
+/* nav toggle */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+.nav-toggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 2rem;
+  left: 2rem;
+  position: fixed;
+  top: 2rem;
+  width: 3.6rem;
+  z-index: 2; }
+  .nav-toggle:hover {
+    opacity: 0.8; }
+  .nav-toggle .nav-toggle-bar,
+  .nav-toggle .nav-toggle-bar::after,
+  .nav-toggle .nav-toggle-bar::before {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    background: white;
+    content: '';
+    height: 0.4rem;
+    width: 100%; }
+  .nav-toggle .nav-toggle-bar {
+    margin-top: 0; }
+  .nav-toggle .nav-toggle-bar::after {
+    margin-top: 0.8rem; }
+  .nav-toggle .nav-toggle-bar::before {
+    margin-top: -0.8rem; }
+  .nav-toggle.expanded .nav-toggle-bar {
+    background: transparent; }
+  .nav-toggle.expanded .nav-toggle-bar::after,
+  .nav-toggle.expanded .nav-toggle-bar::before {
+    background: white;
+    margin-top: 0; }
+  .nav-toggle.expanded .nav-toggle-bar::after {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .nav-toggle.expanded .nav-toggle-bar::before {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+
+/* nav */
+.nav {
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  background: #757171;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 100vh;
+  left: -20rem;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 20rem;
+  z-index: 1; }
+  .nav.expanded {
+    left: 0; }
+  .nav ul {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+
+header {
+  padding: 10px; }
+
+.header-nav {
+  padding: 0 250px;
+  margin-top: 25px; }
+  .header-nav .logo {
+    float: left;
+    font-size: 10px;
+    letter-spacing: 5px;
+    text-transform: uppercase; }
+  .header-nav .img-logo {
+    width: 55%; }
+  .header-nav .social {
+    float: right;
+    color: #7c7979;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 35px 30px -30px #777;
+    font-size: 16px; }
+    .header-nav .social li {
+      list-style: none;
+      color: white;
+      margin-left: 5px;
+      font-size: 20px;
+      box-shadow: 1px 1px 1px -1px rgba(0, 0, 0, 0.3);
+      padding: 5px 10px; }
+      .header-nav .social li a:hover {
+        -webkit-transition: all 600ms cubic-bezier(0.99, 0, 0.57, 0.94);
+        -moz-transition: all 600ms cubic-bezier(0.99, 0, 0.57, 0.94);
+        -ms-transition: all 600ms cubic-bezier(0.99, 0, 0.57, 0.94);
+        -o-transition: all 600ms cubic-bezier(0.99, 0, 0.57, 0.94);
+        transition: all 600ms cubic-bezier(0.99, 0, 0.57, 0.94);
+        -ms-transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg); }
+      .header-nav .social li .fa-facebook:hover {
+        color: #4867AA; }
+      .header-nav .social li .fa-twitter:hover {
+        color: #51d1ff; }
+      .header-nav .social li .fa-github:hover {
+        color: #080808; }
+      .header-nav .social li .fa-linkedin:hover {
+        color: #4235f3; }
+
+main {
+  padding: 100px; }
+
+.main-header {
+  height: 98vh;
+  background-image: linear-gradient(to right bottom, rgba(32, 31, 31, 0.8), rgba(0, 0, 0, 0.8)), url("https://youtu.be/bHQJKxCVJI4");
+  background-size: cover;
+  background-position: top;
+  position: relative; }
+
+.heading-primary {
+  color: white;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+  border-left: 3px solid white; }
+  .heading-primary--main {
+    margin-left: 12px;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 1.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 5s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    margin-left: 12px;
+    display: block;
+    font-size: rem;
+    font-weight: 700;
+    letter-spacing: 11px;
+    animation: moveInRight 1s ease-out; }
+
+.main-text-box {
+  position: absolute;
+  top: 60%;
+  left: 31%;
+  transform: translate(-60%, -60%); }
+
+.btn-contact {
+  cursor: pointer;
+  border-radius: 15px;
+  background-color: transparent;
+  color: #fdb499;
+  padding: 0.5em 1.8em;
+  text-align: center;
+  font-weight: normal;
+  transition: box-shadow 300ms ease-in-out, color 300ms; }
+  .btn-contact:hover, .btn-contact:focus {
+    color: black;
+    box-shadow: 0 0 40px 40px white inset; }

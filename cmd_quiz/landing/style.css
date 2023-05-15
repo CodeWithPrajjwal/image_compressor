@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: black;
+}
+.gif {
+  background-image: url('/landing/images/Untitled\ design.gif');
+  background-size: 100% 100%;
+  width: 150px;
+  height: 150px;
+  margin: 0 55%;
+}
+.bg {
+  background-image: url('/landing/images/Q1101.png');
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 60vh;
+}
+.title {
+  margin: 0 5%;
+  width: 80%;
+  padding: 5% 5%;
+  border-radius: 15px;
+  font-size: 42px;
+  letter-spacing: 2px;
+  font-weight: 1000;
+  text-align: center;
+  position: absolute;
+  color: rgb(255, 255, 255);
+  background-color: rgba(107, 11, 51, 0.369);
+  font-family: "Poppins", sans-serif;
+  top: 18%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.btn {
+  font-size: 28px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+  background-color: rgb(247, 28, 119);
+  width: 60%;
+  text-align: center;
+  border-radius: 100px;
+  border-style: solid;
+  border-color: black;
+  margin-left: 20%;
+  margin-top: 15%;
+  padding: 5px 5px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");

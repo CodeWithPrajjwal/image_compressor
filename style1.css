@@ -1,0 +1,95 @@
+body {
+    background-image: url(/low-angle-shot-mesmerizing-starry-sky.jpg);
+    background-size: 100% 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body{
+    background-repeat: no-repeat;
+}
+
+
+.container {
+    font-size: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun {
+    left: 10em;
+    width: 1em;
+    height: 1em;
+    background-color: rgb(255, 68, 0);
+    border-radius: 50%;
+    border-color: rgb(255, 68, 0);
+    box-shadow: 0 0 1em 1em orangered, 0 0 10em 1.125em orangered,0 0 20em 10.25em orangered, 0 0 10em 10.5em orangered, 0 0 10em 10em orangered;
+}
+
+.earth,.moon {
+    position: absolute;
+    border-style: solid;
+    border-color: white rgb(215, 205, 205) rgb(170, 160, 160) rgb(60, 52, 52);
+    border-width: 0.1em;
+    border-radius: 100%;
+}
+
+.earth {
+    position: absolute;
+    top: 31%;
+    left: 10%;
+    width: 60em;
+    height: 60em;
+    animation: orbitearth 36.5s linear infinite;
+}
+
+.moon {
+    top: 5em;
+    left: 5em;
+    width: 8em;
+    height: 8em;
+    animation: orbitmoon 1s linear infinite;
+}
+
+.earth::before,
+.moon::before {
+    content: '';
+    position: relative;
+    border-radius: 50%;
+}
+
+.earth::before {
+    top: 7.3em;
+    left: 7.3em;
+    width: 3em;
+    height: 3em;
+    background-color: rgb(99, 253, 189);
+
+}
+
+.moon::before {
+    top: 0.8em;
+    left: 0.8em;
+    width: 0.8em;
+    height: 0.8em;
+    background-color: rgb(179, 242, 255);
+
+}
+
+@keyframes orbitmoon {
+    to {
+        transform: rotate(-360deg);
+    }
+
+}
+@keyframes orbitearth {
+    to {
+        transform: rotate(-360deg);
+    }
+
+}

@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: burlywood;
+}
+.header{
+    color: rgb(73, 45, 1);
+    text-align: center;
+    margin-top: 100px;
+    font-weight: 500;
+    font-size: 150%;
+}
+#input{
+    color: rgb(73, 45, 1);
+    width: 50vw;
+    padding: 5px;
+    display: inline-block;
+    position: absolute;
+    left: 25vw;
+    top: 20vh;
+    align-self:center;
+}
+#getPassword{
+    color: rgb(73, 45, 1);
+    padding: 5px;
+    display: inline-block;
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
+    align-self:center;
+}
+
+#regenrate{
+    color: rgb(73, 45, 1);
+    padding: 5px;
+    display: inline-block;
+    position: absolute;
+    right: 24vw;
+    top: 25vh;
+}
+
+#password{
+    background-color: black;
+    color: burlywood;
+    position: relative;
+    font-size: 200%;
+    font-weight: 500;
+    text-align: center;
+    top: 30vh;
+}
+#indicatingText{
+    /*background-color: black;*/
+    color: rgb(73, 45, 1);
+    border-radius: 10px;
+    position: relative;
+    font-size: 200%;
+    font-weight: 500;
+    text-align: center;
+    top: 25vh;
+}
